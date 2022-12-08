@@ -1,0 +1,46 @@
+<mat-toolbar color="primary">
+    <a 
+        routerLink=""
+        mat-icon-button class="home"
+        aria-label="Example home icon"
+    >
+        <mat-icon>home</mat-icon>
+    </a>
+    <span>Portal de Estudiantes</span>
+    <span class="example-spacer"></span>
+    <a
+        *ngIf = "!isLoginEst"
+        [routerLink]="'/login'"
+        mat-icon-button class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon"    
+    >
+        Iniciar Sesion
+    </a>
+    <a
+        *ngIf = "!isLoginEst"
+        [routerLink]="'/signup'"
+        mat-icon-button class="example-icon favorite-icon mr20 ml70"
+        aria-label="Example icon-button with heart icon"    
+    >
+        Registrar
+    </a>
+    <a
+        *ngIf = "isLoginEst"
+        (click) = "logout()"
+        style="margin-right: 60px;"
+        mat-icon-button class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon"    
+        routerLink=""
+    >
+        Cerrar Sesion
+    </a>
+    <a
+        *ngIf = "isLoginEst"
+        [routerLink]="'/profile'"
+        style="margin-right: 10px;"
+        mat-icon-button class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon"    
+    >
+        {{user.username}}
+    </a>
+</mat-toolbar>
