@@ -45,10 +45,10 @@ const routes: Routes = [
       path:'examen-add',component:AgregarExamenComponent
     },
     {
-      path:'pregunta-view',component:PreguntaComponent
+      path : 'pregunta-view/:examenId/:titulo' ,component : PreguntaComponent, 
     },
     {
-      path:'pregunta-add',component:AgregarPreguntaComponent
+      path : 'pregunta-add/:examenId/:titulo' ,component : AgregarPreguntaComponent, 
     },
     {
       path:'profile', component: ProfileComponent,pathMatch:'full'

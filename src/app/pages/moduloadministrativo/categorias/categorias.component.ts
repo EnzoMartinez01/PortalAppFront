@@ -16,7 +16,7 @@ export class CategoriasComponent implements OnInit {
     this.catService.listarCategoria().subscribe(
       (dato:any) => {
         this.categorias = dato;
-        
+        console.log(this.categorias)
       }
     )
   }
