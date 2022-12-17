@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
 import urlbase from './helper';
 
 @Injectable({
@@ -12,4 +12,10 @@ export class UserService {
   public insertarusuario (user: any){
     return this.httpClient.post(`${urlbase}/usuario/registrarusuario`, user);
   }
+
+  public listarEstudiantes(){
+    return this.httpClient.get(`${urlbase}/usuario/listarUsuario`,{ 
+      headers: new HttpHeaders({'Authorization': 'Bearer ' + localStorage.getItem('token')})
+  });
+  } 
 }

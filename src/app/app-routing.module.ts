@@ -15,6 +15,8 @@ import { ExamenComponent } from './pages/moduloadministrativo/examen/examen.comp
 import { AgregarExamenComponent } from './pages/moduloadministrativo/agregar-examen/agregar-examen.component';
 import { PreguntaComponent } from './pages/moduloadministrativo/pregunta/pregunta.component';
 import { AgregarPreguntaComponent } from './pages/moduloadministrativo/agregar-pregunta/agregar-pregunta.component';
+import { ListaestudianteComponent } from './pages/moduloadministrativo/listaestudiante/listaestudiante.component';
+import { ExamenuserComponent } from './pages/moduloadministrativo/examenuser/examenuser.component';
 
 
 const routes: Routes = [
@@ -52,6 +54,12 @@ const routes: Routes = [
     },
     {
       path:'profile', component: ProfileComponent,pathMatch:'full'
+    },
+    {
+      path:'list-estudiante', component: ListaestudianteComponent,pathMatch:'full'
+    },
+    {
+      path:'examenuser', component: ExamenuserComponent,pathMatch:'full'
     },
   ]
   }

@@ -14,7 +14,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './pages/home/home.component';
@@ -35,7 +35,8 @@ import { PreguntaComponent } from './pages/moduloadministrativo/pregunta/pregunt
 import { AgregarPreguntaComponent } from './pages/moduloadministrativo/agregar-pregunta/agregar-pregunta.component';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
-
+import { ListaestudianteComponent } from './pages/moduloadministrativo/listaestudiante/listaestudiante.component';
+import { ExamenuserComponent } from './pages/moduloadministrativo/examenuser/examenuser.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,9 @@ import {MatSelectModule} from '@angular/material/select';
     ExamenComponent,
     AgregarExamenComponent,
     PreguntaComponent,
-    AgregarPreguntaComponent
+    AgregarPreguntaComponent,
+    ListaestudianteComponent,
+    ExamenuserComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +76,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatDividerModule,
     MatListModule,
     MatRadioModule,
-    MatSelectModule
+    MatSelectModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
